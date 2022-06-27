@@ -1,4 +1,4 @@
-module github.com/mrz1836/codepipeline-to-github
+module github.com/justifiHQ/codepipeline-to-github
 
 go 1.16
 

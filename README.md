@@ -88,7 +88,7 @@ The application relies on [AWS Secrets Manager](https://aws.amazon.com/secrets-m
 and [AWS SSM](https://aws.amazon.com/systems-manager/features/) to store environment variables. 
 Sensitive environment variables are encrypted using [AWS KMS](https://aws.amazon.com/kms/) and then decrypted at runtime.
 
-Deploy different environments by changing the `<stage>` to `production` or `developement` as an example.
+Deploy different environments by changing the `<stage>` to `production` or `staging` as an example.
 The default stage is `production` if not specified.
 
 <details>
@@ -145,12 +145,12 @@ make deploy
 
 _(Example)_ Customized deployment for another stage
 ```shell script
-make deploy stage="development" branch="development"
+make deploy stage="staging" branch="staging"
 ``` 
 
 _(Example)_ Customized deployment for a feature branch
 ```shell script
-make deploy stage="development" branch="some-feature" feature="some-feature"
+make deploy stage="staging" branch="some-feature" feature="some-feature"
 ```
 
 _(Example)_ Customized S3 bucket location
@@ -175,12 +175,12 @@ make teardown
 
 _(Example)_ Teardown another stack via stage
 ```shell script
-make teardown stage="development"
+make teardown stage="staging"
 ``` 
 
 _(Example)_ Teardown a feature/branch stack
 ```shell script
-make teardown stage="development" feature="some-feature"
+make teardown stage="staging" feature="some-feature"
 ``` 
 </details>
 
